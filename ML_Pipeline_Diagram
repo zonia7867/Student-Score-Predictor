@@ -1,0 +1,25 @@
+// Machine Learning Pipeline
+digraph {
+	A [label="Raw Data (6 Sheets)" fillcolor=lightblue shape=cylinder style=filled]
+	B [label="Data Cleaning
+(Remove Junk, Merge)" fillcolor=lightgrey shape=rect style=filled]
+	C [label="Feature Engineering
+(Create RQ1, RQ2, RQ3 sets)" fillcolor=lightyellow shape=rect style=filled]
+	D [label="Data Split
+(80% Train / 20% Test)" fillcolor=lightgreen shape=diamond style=filled]
+	E [label="Model Training
+(Linear, Poly, Dummy)" fillcolor=orange shape=rect style=filled]
+	F [label="Bootstrapping
+(500 Samples)" fillcolor=white shape=ellipse style=filled]
+	G [label="Validation
+(MAE, RMSE, 95% CI)" fillcolor=lightpink shape=rect style=filled]
+	H [label="Final Deliverables
+(Dashboard & Report)" fillcolor=gold shape=folder style=filled]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	G -> H
+}
